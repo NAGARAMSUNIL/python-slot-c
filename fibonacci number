@@ -1,13 +1,23 @@
-def is_Fibonacci(R):  
+def Fibonacci(n):
    
-    # R is a Fibonacci number only if one of (5 * R * R + 4) or (5 * R * R - 4) or both   
-   # of them are perferct square  
-    return is_Perfect_Square(5 * R * R + 4) or is_Perfect_Square(5 * R * R - 4)  
-      
-# Now, we will create a utility function for testing the above functions  
-for J in range(1, 22):  
-     if (is_Fibonacci(J) == True):  
-         print ("Number:", J, ": Yes, the given number is a Fibonacci_Number")  
-     else:  
-         print ("Number:", J, ": No, the given number is not a Fibonacci_number")
+    # Check if input is 0 then it will
+    # print incorrect input
+    if n < 0:
+        print("Incorrect input")
+ 
+    # Check if n is 0
+    # then it will return 0
+    elif n == 0:
+        return 0
+ 
+    # Check if n is 1,2
+    # it will return 1
+    elif n == 1 or n == 2:
+        return 1
+ 
+    else:
+        return Fibonacci(n-1) + Fibonacci(n-2)
+ 
+# Driver Program
+print(Fibonacci(9))
          
