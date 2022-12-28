@@ -1,0 +1,13 @@
+def is_Fibonacci(R):  
+   
+    # R is a Fibonacci number only if one of (5 * R * R + 4) or (5 * R * R - 4) or both   
+   # of them are perferct square  
+    return is_Perfect_Square(5 * R * R + 4) or is_Perfect_Square(5 * R * R - 4)  
+      
+# Now, we will create a utility function for testing the above functions  
+for J in range(1, 22):  
+     if (is_Fibonacci(J) == True):  
+         print ("Number:", J, ": Yes, the given number is a Fibonacci_Number")  
+     else:  
+         print ("Number:", J, ": No, the given number is not a Fibonacci_number")
+         
